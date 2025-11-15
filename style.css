@@ -131,3 +131,16 @@ section {
     opacity: 1;
     transform: translateY(0) translateX(0);
 }
+
+/* كود لقص النص الطويل في بطاقة المشروع الأفقية */
+.project-description-truncate {
+    font-size: 1.0rem; /* خط أصغر قليلاً */
+    line-height: 2.1;
+    
+    /* هذا هو الكود السحري لقص النص بعد 5 أسطر */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10; /* تحديد عدد الأسطر */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
