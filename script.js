@@ -38,6 +38,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==== كود "Read More" الجديد ====
+    const collapseElement = document.getElementById('projectDetails');
+    const collapseButton = document.querySelector('a[href="#projectDetails"]');
+
+    if (collapseElement && collapseButton) {
+        
+        // عند فتح النص
+        collapseElement.addEventListener('show.bs.collapse', () => {
+            collapseButton.textContent = 'Read Less';
+            const ellipsis = collapseElement.parentElement.querySelector('.ellipsis');
+            if (ellipsis) {
+                ellipsis.style.display = 'none';
+            }
+        });
+
+        // عند إغلاق النص
+        collapseElement.addEventListener('hide.bs.collapse', () => {
+            collapseButton.textContent = 'Read More';
+            const ellipsis = collapseElement.parentElement.querySelector('.ellipsis');
+            if (ellipsis) {
+                ellipsis.style.display = 'inline';
+            }
+        });
+    }
+
 });
 
 // Add this small bit to your style.css for the navbar shrink effect
