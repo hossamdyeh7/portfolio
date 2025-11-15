@@ -1,0 +1,133 @@
+/* ==== Global Styles ==== */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Padding */
+section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+/* ==== Navbar ==== */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0d6efd !important; /* Bootstrap Primary Color */
+}
+
+/* ==== Hero Section ==== */
+.hero-section {
+    min-height: 100vh;
+    /* Colorful gradient background */
+    background: linear-gradient(135deg, #0575E6, #021B79, #000);
+    background-size: 200% 200%;
+    animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-section .lead {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.social-links a {
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+/* ==== Skills Section ==== */
+#skills .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#skills .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+/* ==== Projects Section ==== */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+.project-card .card-img-top {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+/* ==== Experience Timeline (Optional) ==== */
+.timeline-item {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid #0d6efd;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -9px; /* Half of width */
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    border: 3px solid #f8f9fa; /* Match bg-light */
+}
+
+/* ==== Scroll Animation Classes ==== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.fade-in-up {
+    transform: translateY(30px);
+}
+
+.animate-on-scroll.fade-in-left {
+    transform: translateX(-30px);
+}
+
+.animate-on-scroll.fade-in-right {
+    transform: translateX(30px);
+}
+
+.animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
