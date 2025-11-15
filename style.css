@@ -132,31 +132,35 @@ section {
     transform: translateY(0) translateX(0);
 }
 
-/* كود لقص النص الطويل في بطاقة المشروع الأفقية */
-.project-description-truncate {
-    font-size: 1.0rem; 
-    line-height: 2.1;
-    
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 10; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    
-    /* ****************************************
-      * تم إضافة السطر التالي لعمل "Justify" *
-      ****************************************
-    */
-    text-align: justify;
+/* === تم حذف كود .project-description-truncate من هنا === */
+
+
+/* === تم إضافة هذا الكود لـ "Read More" === */
+.project-card .card-text .collapse {
+    display: none; 
+}
+.project-card .card-text .collapse.show {
+    display: inline; /* لجعل النص يكمل بنفس السطر */
 }
 
+.project-card .card-text .ellipsis {
+    display: inline; /* لإظهار النقاط ... */
+}
+/* ======================================= */
+
+
 /* ************************************************
-  * تم إضافة هذا الكود لعمل "Justify" لباقي الفقرات *
+  * كود "Justify" لباقي الفقرات
   ************************************************
 */
 #about .lead,
 #experience .timeline-item li,
 #experience .cert-item p,
 #contact .col-lg-8 > p {
+    text-align: justify;
+}
+
+/* كود "Justify" لفقرة المشروع أيضاً */
+.project-card .card-text {
     text-align: justify;
 }
