@@ -134,13 +134,29 @@ section {
 
 /* كود لقص النص الطويل في بطاقة المشروع الأفقية */
 .project-description-truncate {
-    font-size: 1.0rem; /* خط أصغر قليلاً */
+    font-size: 1.0rem; 
     line-height: 2.1;
     
-    /* هذا هو الكود السحري لقص النص بعد 5 أسطر */
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 10; /* تحديد عدد الأسطر */
+    -webkit-line-clamp: 10; 
     overflow: hidden;
     text-overflow: ellipsis;
+    
+    /* ****************************************
+      * تم إضافة السطر التالي لعمل "Justify" *
+      ****************************************
+    */
+    text-align: justify;
+}
+
+/* ************************************************
+  * تم إضافة هذا الكود لعمل "Justify" لباقي الفقرات *
+  ************************************************
+*/
+#about .lead,
+#experience .timeline-item li,
+#experience .cert-item p,
+#contact .col-lg-8 > p {
+    text-align: justify;
 }
