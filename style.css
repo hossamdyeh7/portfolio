@@ -164,3 +164,8 @@ section {
 .project-card .card-text {
     text-align: justify;
 }
+
+.tight-list li {
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
